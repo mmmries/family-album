@@ -1,6 +1,11 @@
+require 'mongoid_grid'
+
 class Image
   include Mongoid::Document
-  field :date, Date
-  field :people, Array
-  field :notes, String
+  include Mongoid::Grid
+  field :date, type: Date
+  field :people, type: Array
+  field :notes, type: String
+  field :status, type: String # The statuses should follow the path of imported->tagged
+  attachment :image
 end
