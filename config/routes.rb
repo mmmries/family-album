@@ -1,4 +1,12 @@
 HistoryMedia::Application.routes.draw do
+  resources :roles
+
+  resources :users
+
+  resources :images
+
+  resources :projects
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
