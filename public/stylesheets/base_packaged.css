@@ -223,7 +223,7 @@ td.qtip_top_score {border-bottom: 1px solid #333}
 .autocomplete .selected {background:#111}
 .autocomplete div {padding:2px 5px; white-space:nowrap; overflow:hidden}
 .autocomplete strong {color:#f68000}
- form p.infieldlabel {position:relative; margin-bottom:0 0 10px 0; text-shadow: none}
+form p.infieldlabel { position:relative; margin-bottom:10px; text-shadow: none }
 form p.infieldlabel input {font-size:14px; padding:5px}
 form p.infieldlabel label {font-weight:normal; font-size:14px; position:absolute; top:7px; left:8px; float:none; display:inline; text-align:left; color:#777}
 tr.attachment td {background-color:#2a2a2a}
