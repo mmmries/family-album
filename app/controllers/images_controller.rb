@@ -80,4 +80,14 @@ class ImagesController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  
+  # GET /img/1
+  def view
+    @image = Image.find(params[:id])
+    
+    send_data(@image.attachment.read, {
+      :filename => @image.attachment.filename, 
+      :type => @image.attachment.content_type
+      :disposition => 'inline'})
+  end
 end
