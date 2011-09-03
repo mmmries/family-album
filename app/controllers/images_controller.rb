@@ -85,9 +85,9 @@ class ImagesController < ApplicationController
   def view
     @image = Image.find(params[:id])
     
-    send_data(@image.attachment.read, {
-      :filename => @image.attachment.filename, 
-      :type => @image.attachment.content_type
-      :disposition => 'inline'})
+    send_data(@image.image.read, 
+      :filename => @image.image.filename, 
+      :type => @image.image.content_type,
+      :disposition => 'inline')
   end
 end

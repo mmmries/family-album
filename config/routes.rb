@@ -9,7 +9,7 @@ HistoryMedia::Application.routes.draw do
 
   resources :projects
   
-  'img/:id' => 'images#view'
+  match 'img/:id' => 'images#view'
   
   root :to => "user#login"
 

@@ -12,6 +12,7 @@
     <td><%= link_to 'Show', image %></td>
     <td><%= link_to 'Edit', edit_image_path(image) %></td>
     <td><%= link_to 'Destroy', image, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><img src="/img/<%= image.id.to_s %>" height="75px" /></td>
   </tr>
 <% end %>
 </table>
