@@ -1,8 +1,11 @@
 class SessionsController < ApplicationController
   # GET /sessions/new - login screen
   def new
+    unless current_user.nil? then
+      redirect_to "/projects"
+    end
+    
     @session = Session.new
-
     respond_to do |format|
       format.html # new.html.haml
     end
