@@ -5,6 +5,10 @@ gem 'rails', '3.0.10'
 gem "mongoid", "~> 2.1"
 gem "bson_ext", "~> 1.3"
 gem "mongoid_grid", :git => "https://github.com/dusty/mongoid_grid.git"
+gem "mongoid_session_store", ">= 1.1"
+
+gem 'haml'
+gem 'jquery-rails', '>= 1.0.12'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

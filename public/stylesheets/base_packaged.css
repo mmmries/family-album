@@ -7,6 +7,7 @@ img {border: 0}
 img.help {vertical-align: -3px}
 hr {background:#666; border:0; height:1px; color:#666}
 a {color: #9f8; font-weight: bold}
+.mainbox { background-color: #505050; width:100% }
 a:hover {text-decoration: none}
 a.cloud {text-decoration: none; color: #7aa6ff}
 a.cloud:hover {background: #333}

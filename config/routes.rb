@@ -6,12 +6,18 @@ HistoryMedia::Application.routes.draw do
   end
 
   resources :images
-
-  resources :projects
-  
   match 'img/:id' => 'images#view'
   
-  root :to => "user#login"
+  resources :projects
+  
+  
+  ## session controls
+  resources :sessions
+  match 'login' => 'sessions#new', :as => :login
+  delete 'logout' => 'sessions#destroy', :as => :logout
+  
+  ## Front page is for logins
+  root :to => "sessions#new"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
