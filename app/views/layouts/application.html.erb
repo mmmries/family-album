@@ -20,11 +20,26 @@
 <div class='wrapper'>
 <div class='' id='header'>
 <div id='header_content'>
-<div style='float:right; margin-top:20px; width:370px; line-height:20px;'>
-  
-</div>
-<a href="/" style="clear:none;"><img alt="Family Album" height="99" src="/images/album.png" width="99" /></a>
-<span style="font-size:36pt">Family Album</span>
+  <table>
+    <tr>
+      <td width="100"><a href="/" style=""><img alt="Family Album" height="99" src="/images/album.png" width="99" /></a></td>
+      <td><div style="font-size:36pt; color:#fff; line-height: 42pt;">Family Album</div></div></td>
+      <td><div style="align:right;">
+        <% if user_signed_in? then %>
+          Signed in as <%= current_user.email%>, <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+        <% else %>
+          Please <%= link_to "Sign In", new_user_session_path %>
+        <% end %>
+      </div></td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <% flash.each do | name, msg | %>
+          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+        <% end %>
+      </td>
+    </tr>
+  </table>
 </div>
 </div>
 

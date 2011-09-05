@@ -18,6 +18,7 @@ input, select, textarea, div.textarea {font: 13px Arial, Helvetica, sans-serif; 
 input.checkbox {background-color: inherit; border: 0; vertical-align: -2px}
 div#header {background: #444}
 div#header div#header_content {width: 940px; padding: 33px 0 8px 0; margin: 0 auto}
+div#header_content {color: #f0f0f0;}
 div#header.small_header div#header_content {padding: 10px 0 6px 0}
 div#content {padding: 2em; width: 940px; margin: 0 auto 0 auto}
 div.weak {font-size: 11px; color: #aaa; text-align:center}
