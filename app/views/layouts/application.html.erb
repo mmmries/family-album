@@ -1,16 +1,89 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
-  <title>FamilyAlbum</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
+	<%= stylesheet_link_tag :all %>
+	<%= javascript_include_tag :defaults %>
+	<%= javascript_include_tag "jquery.corner.js" %>
+	<%= csrf_meta_tag %>
+	<meta content='text/html;charset=utf-8' http-equiv='Content-Type' />
+	<title>History Media</title>
+	<link rel="icon" type="image/png" href="/images/album.png">
+	<script type="text/javascript">
+	 $(document).ready(function(){
+	   $('.top-rounded-corners').corner('round top');
+	   $('.bottom-rounded-corners').corner('round bottom');
+	   $('.rounded-corners').corner('round');
+	 });
+	</script>
 </head>
-<body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<body class=''>
+<div class='wrapper'>
+<div class='' id='header'>
+<div id='header_content'>
+<div style='float:right; margin-top:20px; width:370px; line-height:20px;'>
+  
+</div>
+<a href="/" style="clear:none;"><img alt="Family Album" height="99" src="/images/album.png" width="99" /></a>
+<span style="font-size:36pt">Family Album</span>
+</div>
+</div>
 
+<div id='content'>
 <%= yield %>
-
+<br />
+<br />
+<!--
+<table style='width:100%'>
+<tr>
+<td style='width:28%; padding-right:5px'>
+<div class='top_rounded_corners' style='background-color:#333; text-align:center; padding:5px;'>
+<h3 style='margin:0;'>Bottom Left Title</h3>
+</div>
+<div class='bottom_rounded_corners' style='text-align:left; background-color:#555; padding:10px 15px; height:55px; font-size:12px'>
+Bottom Left Box
+</div>
+</td>
+<td style='padding-right:5px'>
+<div class='top_rounded_corners' style='background-color:#333; text-align:center; padding:5px;'>
+<h3 style='margin:0;'>
+Bottom Center Title
+</h3>
+</div>
+<div class='bottom_rounded_corners' style='text-align:left; background-color:#555; padding:10px 15px; height:55px; font-size:12px'>
+Bottom Center Box
+</div>
+</td>
+<td style='width:31%;'>
+<div class='top_rounded_corners' style='background-color:#333; text-align:center; padding:5px;'>
+<h3 style='margin:0;'>
+Bottom Right Title
+</h3>
+</div>
+<div class='bottom_rounded_corners' style='text-align:left; background-color:#555; padding:10px 15px; height:55px; font-size:12px'>
+Bottom Right Box
+</div>
+</td>
+</tr>
+</table>
+-->
+</div>
+<div class='push'></div>
+</div>
+<div id='footer'>
+<div id='footer_content'>
+<!--
+<div style='float:right'>
+<a href="http://challonge.com/tournament">Browse the 58,206 tournaments published on CHALLONGE!</a>
+</div>
+&nbsp;&nbsp;
+<a href="http://challonge.com/static/about">About</a>
+&nbsp;|&nbsp;
+<a href="http://challonge.com/static/terms_of_service">Terms</a>
+-->
+</div>
+</div>
+<div id='tmp_series_top'>
+<span style='display:none; font-weight:bold'></span>
+</div>
 </body>
 </html>
