@@ -46,4 +46,7 @@ FamilyAlbum::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+  # specify the host of the production server
+  config.action_mailer.default_url_options = { :host => 'album.riesd.com' }
 end
