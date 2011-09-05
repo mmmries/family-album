@@ -3,9 +3,14 @@ require 'digest/sha1'
 class User
   include Mongoid::Document
   
-  field :username
-  field :password_hash
-  has_and_belongs_to_many :roles
+  # Include default devise modules. Others available are:
+  # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable, :recoverable, :registerable 
+  devise :database_authenticatable, :rememberable, :trackable, :validatable
+
+  
+  field :email, type: String
+  field :password_hash, type: String
+  field :admin, type: Boolean
   
   attr_accessor :password
   

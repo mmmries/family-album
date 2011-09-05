@@ -1,9 +1,8 @@
 HistoryMedia::Application.routes.draw do
+  devise_for :users
+
   #users and roles are administrative functions
-  namespace :admin do
-    resources :users
-    resources :roles
-  end
+  resources :users
 
   resources :images
   match 'img/:id' => 'images#view'

@@ -46,4 +46,7 @@ HistoryMedia::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+  # Setup the host for production
+  config.action_mailer.default_url_options = { :host => 'album.riesd.com' }
 end

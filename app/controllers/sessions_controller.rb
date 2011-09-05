@@ -3,11 +3,11 @@ class SessionsController < ApplicationController
   def new
     unless current_user.nil? then
       redirect_to "/projects"
-    end
-    
-    @session = Session.new
-    respond_to do |format|
-      format.html # new.html.haml
+    else
+      @session = Session.new
+      respond_to do |format|
+        format.html # new.html.haml
+      end
     end
   end
 
