@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns='http://www.w3.org/1999/xhtml'>
 <head>
-	<%= stylesheet_link_tag :all %>
+	<%= stylesheet_link_tag "base_packaged.css" %>
 	<%= javascript_include_tag :defaults %>
 	<%= javascript_include_tag "jquery.corner.js" %>
 	<%= csrf_meta_tag %>
@@ -20,11 +20,11 @@
 <div class='wrapper'>
 <div class='' id='header'>
 <div id='header_content'>
-  <table>
+  <table width="100%">
     <tr>
       <td width="100"><a href="/" style=""><img alt="Family Album" height="99" src="/images/album.png" width="99" /></a></td>
       <td><div style="font-size:36pt; color:#fff; line-height: 42pt;">Family Album</div></div></td>
-      <td><div style="align:right;">
+      <td><div style="float:right;">
         <% if user_signed_in? then %>
           Signed in as <%= current_user.email%>, <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
         <% else %>
@@ -34,9 +34,7 @@
     </tr>
     <tr>
       <td colspan="3">
-        <% flash.each do | name, msg | %>
-          <%= content_tag :div, msg, :id => "flash_#{name}" %>
-        <% end %>
+        
       </td>
     </tr>
   </table>
@@ -44,7 +42,10 @@
 </div>
 
 <div id='content'>
-<%= yield %>
+  <% flash.each do | name, msg | %>
+    <%= content_tag :div, msg, :id => "flash_#{name}", :class => "flash-box rounded-corners" %>
+  <% end %>
+  <%= yield %>
 <br />
 <br />
 <!--

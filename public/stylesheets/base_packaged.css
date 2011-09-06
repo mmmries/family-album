@@ -16,6 +16,7 @@ a.colorhover {font-style:italic; text-decoration:none; color:#ccc; font-size:12p
 a.tinydrop:hover, a.colorhover:hover {color:#c6d3e9}
 input, select, textarea, div.textarea {font: 13px Arial, Helvetica, sans-serif; background-color: #ddd; border: 1px solid #222; font-weight: bold; padding: 2px; color: #333}
 input.checkbox {background-color: inherit; border: 0; vertical-align: -2px}
+div.flash-box {border: 1px solid orange; background-color: #333333; color: orange; padding: 5px; clear:both;}
 div#header {background: #444}
 div#header div#header_content {width: 940px; padding: 33px 0 8px 0; margin: 0 auto}
 div#header_content {color: #f0f0f0;}
@@ -34,6 +35,7 @@ div#footer_content {font-size: 12px; color: #666; width: 940px; margin: 0 auto; 
 div#footer a {font-weight:normal; color:#aaa}
 div#footer a:hover {text-decoration:none}
 h1 {margin: 0; padding: 10px 14px; font: 20px arial, serif; font-weight: bold; background: #222; color: #f9f9f9}
+div.box {text-align:left; background-color:#555; padding:10px 15px; font-size:12px}
 h2.color {font-size:19px; margin-top:5px; color:#c6d3e9}
 h2.category {font-size:12px; font-style:italic; color:#aaa; margin:5px 0 0 0}
 div.description {background-color: #383838; padding: 15px; font: 12px Arial, Helvetica, sans-serif; color: #e0e0e0; text-shadow: none}
