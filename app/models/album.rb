@@ -3,4 +3,5 @@ class Album
   
   field :name, type: String
   
+  has_many :pictures
 end
