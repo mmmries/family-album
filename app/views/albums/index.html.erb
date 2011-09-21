@@ -13,6 +13,6 @@
 </table>
 
 <br />
-<% if current_user then %>
+<% if current_user.admin? then %>
   <%= link_to 'New Album', new_album_path %>
 <% end %>

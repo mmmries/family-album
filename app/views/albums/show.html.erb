@@ -1,5 +1,7 @@
 <p id="notice"><%= notice %></p>
-
+<% @album.pictures.each do |picture| %>
+  <%= "<img src='/pictures/#{picture.id.to_s}?size=thumbnail' /><br/>".html_safe %>
+<% end %>
 
 <%= link_to 'Edit', edit_album_path(@album) %> |
 <%= link_to 'Back', albums_path %>

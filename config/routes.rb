@@ -2,6 +2,7 @@ FamilyAlbum::Application.routes.draw do
   devise_for :users
 
   resources :albums
+  resources :pictures
   
   root :to => "albums#index"
 
