@@ -10,7 +10,7 @@ gem "mongoid_session_store", ">= 1.1"
 gem 'haml'
 gem 'jquery-rails', '>= 1.0.12'
 
-gem 'devise', '>= 1.4.4'
+gem 'devise', '>= 1.4.7'
 
 gem 'rmagick', '>= 2.13.1'
 
