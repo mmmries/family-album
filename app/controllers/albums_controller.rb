@@ -18,19 +18,24 @@ class AlbumsController < ApplicationController
   def show
     @album = Album.find(params[:id])
     
-    if params[:tag].nil? then
+    if ! params[:tag].nil? then
+      @tag = params[:tag]
+      @pictures = @album.pictures.where( :tags => params[:tag] )
+      render "tag_search"
+    elsif ! params[:people].nil? then
+      @people = params[:people]
+      @pictures = @album.pictures.where( :people => params[:people] )
+      render "people_search"
+    else
       @untagged_pictures = @album.pictures.where( :needs_tagging => true ).limit(6).order_by( [[:created_at, :asc]] )
       @popular_pictures = @album.pictures.order_by( [[:views, :desc], [:created_at, :desc]] ).limit(6)
       @tags = @album.pictures.distinct( :tags )
+      @people = @album.pictures.distinct( :people )
   
       respond_to do |format|
         format.html # show.html.erb
         format.xml  { render :xml => @album }
       end
-    else
-      @tag = params[:tag]
-      @pictures = @album.pictures.where( :tags => params[:tag] )
-      render "tag_search"
     end
   end
 

@@ -25,6 +25,15 @@
 	<div style="clear:both;">&nbsp;</div>
 <% end %>
 
+<% if @people.size > 0 %>
+	<h3>People</h3>
+	<div>
+		<% @people.each do |people| %>
+			<%= link_to people, "#{album_path(@album)}?people=#{people}" %>&nbsp;
+		<% end %>
+	</div>
+	<div style="clear:both;">&nbsp;</div>
+<% end %>
 
 <% if current_user.admin? then %>
 	<%= link_to 'Edit', edit_album_path(@album) %> |

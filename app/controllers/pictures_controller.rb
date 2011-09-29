@@ -24,8 +24,8 @@ class PicturesController < ApplicationController
   def update
     @picture = Picture.find(params[:id])
 
-    params[:picture][:people] = params[:picture][:people].split(",").map{ |s| s.strip }
-    params[:picture][:tags] = params[:picture][:tags].split(",").map{ |s| s.strip }
+    params[:picture][:people] = params[:picture][:people].split(",").map{ |s| s.strip.downcase }
+    params[:picture][:tags] = params[:picture][:tags].split(",").map{ |s| s.strip.downcase }
     params[:picture][:date] = "#{params[:picture]["date(1i)"]}-#{params[:picture]["date(2i)"]}-#{params[:picture]["date(3i)"]}"
 
     respond_to do |format|
