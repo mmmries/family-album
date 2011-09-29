@@ -17,10 +17,20 @@ class AlbumsController < ApplicationController
   # GET /albums/1.xml
   def show
     @album = Album.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @album }
+    
+    if params[:tag].nil? then
+      @untagged_pictures = @album.pictures.where( :needs_tagging => true ).limit(6).order_by( [[:created_at, :asc]] )
+      @popular_pictures = @album.pictures.order_by( [[:views, :desc], [:created_at, :desc]] ).limit(6)
+      @tags = @album.pictures.distinct( :tags )
+  
+      respond_to do |format|
+        format.html # show.html.erb
+        format.xml  { render :xml => @album }
+      end
+    else
+      @tag = params[:tag]
+      @pictures = @album.pictures.where( :tags => params[:tag] )
+      render "tag_search"
     end
   end
 

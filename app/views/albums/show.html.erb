@@ -1,7 +1,32 @@
 <p id="notice"><%= notice %></p>
-<% @album.pictures.each do |picture| %>
-  <%= "<img src='/pictures/#{picture.id.to_s}?size=thumbnail' /><br/>".html_safe %>
+<% if @untagged_pictures.size > 0 %>
+	<h3>Pictures that need your input</h3>
+	<% @untagged_pictures.each do |picture| %>
+	    <%= picture_thumbnail(picture) %>
+	<% end %>
+	<div style="clear:both;">&nbsp;</div>
 <% end %>
 
-<%= link_to 'Edit', edit_album_path(@album) %> |
-<%= link_to 'Back', albums_path %>
+<% if @popular_pictures.size > 0 %>
+	<h3>Most Popular Pictures</h3>
+	<% @popular_pictures.each do |picture| %>
+		<%= picture_thumbnail(picture) %>
+	<% end %>
+	<div style="clear:both;">&nbsp;</div>
+<% end %>
+
+<% if @tags.size > 0 %>
+	<h3>Tags</h3>
+	<div>
+		<% @tags.each do |tag| %>
+			<%= link_to tag, "#{album_path(@album)}?tag=#{tag}" %>&nbsp;
+		<% end %>
+	</div>
+	<div style="clear:both;">&nbsp;</div>
+<% end %>
+
+
+<% if current_user.admin? then %>
+	<%= link_to 'Edit', edit_album_path(@album) %> |
+<% end %>
+<%= link_to 'Back To Album List', albums_path %>

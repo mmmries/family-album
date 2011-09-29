@@ -1,12 +1,14 @@
 html, body {margin: 0; height: 100%}
 .wrapper {min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -70px;  }
 .push {height: 70px;  }
-body {font: 13px Arial, Helvetica, sans-serif; margin: 0; background: #777 url('../images/bg.gif'); color: #f0f0f0; text-shadow: 1px 1px 1px #222}
+.half { width: 50%; }
+body {font: 13px Arial, Helvetica, sans-serif; margin: 0; color: #f0f0f0; }
 .center_fixed {width: 890px; margin: 0 auto}
 img {border: 0}
 img.help {vertical-align: -3px}
 hr {background:#666; border:0; height:1px; color:#666}
 a {color: #9f8; font-weight: bold}
+#content a {color: #666; text-shadow: none;}
 .mainbox { background-color: #505050; width:100% }
 a:hover {text-decoration: none}
 a.cloud {text-decoration: none; color: #7aa6ff}
@@ -16,12 +18,12 @@ a.colorhover {font-style:italic; text-decoration:none; color:#ccc; font-size:12p
 a.tinydrop:hover, a.colorhover:hover {color:#c6d3e9}
 input, select, textarea, div.textarea {font: 13px Arial, Helvetica, sans-serif; background-color: #ddd; border: 1px solid #222; font-weight: bold; padding: 2px; color: #333}
 input.checkbox {background-color: inherit; border: 0; vertical-align: -2px}
-div.flash-box {border: 1px solid orange; background-color: #333333; color: orange; padding: 5px; clear:both;}
+div.flash-box {border: 1px solid orange; background-color: #333333; color: orange; padding: 5px; clear:both; margin-left: auto; margin-right: auto; margin-bottom: 10px; }
 div#header {background: #444}
 div#header div#header_content {width: 940px; padding: 33px 0 8px 0; margin: 0 auto}
 div#header_content {color: #f0f0f0;}
 div#header.small_header div#header_content {padding: 10px 0 6px 0}
-div#content {padding: 2em; width: 940px; margin: 0 auto 0 auto}
+div#content { color: #222222; padding: 2em; width: 90%; margin: 0 auto 0 auto; background-color:#FFFFFF;}
 div.weak {font-size: 11px; color: #aaa; text-align:center}
 div#bracket {padding: 0 2em 0 2em}
 div#bracket_reload_message {padding: 10px; background: #333; margin-bottom: 25px}
@@ -34,8 +36,10 @@ div#footer {height: 70px; background-color: #333}
 div#footer_content {font-size: 12px; color: #666; width: 940px; margin: 0 auto; padding-top: 15px}
 div#footer a {font-weight:normal; color:#aaa}
 div#footer a:hover {text-decoration:none}
+div.picture-frame { border: 1px solid black; padding:10px; margin:10px; float:left; }
 h1 {margin: 0; padding: 10px 14px; font: 20px arial, serif; font-weight: bold; background: #222; color: #f9f9f9}
-div.box {text-align:left; background-color:#555; padding:10px 15px; font-size:12px}
+#content div.box {text-align:left; background-color:#555; padding:10px 15px; font-size:12px; color: #eeeeee; }
+#content div.box a{ color:#9f8; }
 h2.color {font-size:19px; margin-top:5px; color:#c6d3e9}
 h2.category {font-size:12px; font-style:italic; color:#aaa; margin:5px 0 0 0}
 div.description {background-color: #383838; padding: 15px; font: 12px Arial, Helvetica, sans-serif; color: #e0e0e0; text-shadow: none}
@@ -55,6 +59,7 @@ div.description p {margin:0; padding:0}
 h1 div.side_link {padding: 5px 0 0 0; float: right; font: 13px Arial, Helvetica, sans-serif; width: 200px}
 div.h1_content {padding: 20px 25px 25px 25px; background: #444; color: #f0f0f0}
 h3 {margin: 0 0 0.5em 0; font-size: 16px; color: #f9f9f9}
+#content h3,h2 { color: #222222; }
 pre {background: #555; padding: 15px; margin: 15px 25px 0}
 ul {margin-left: 0}
 form {margin: 0}
@@ -111,7 +116,7 @@ div.tp_edit div {font-weight: normal; margin: 5px; padding: 10px; background-col
 table.label_form tr td.middle {vertical-align: middle; text-align: right}
 table.label_form tr td.top {padding-top: 10px; text-align: right}
 table.extra_padding tr td.top {padding-top: 16px}
-label {font-size: 13px; font-weight: bold; display: block; width: 240px; text-align: right; margin-right: 5px}
+label {font-size: 13px; font-weight: bold; display: inline; width: 240px; text-align: right; margin-right: 5px}
 .centered {text-align: center}
 div.left_col {float: left; width: 500px; padding-top: 5px; font-size: 13px}
 div.left_col hr, div#wysiwyg_container hr {margin: 15px 0; background: #505050; color: #505050}

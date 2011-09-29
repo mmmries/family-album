@@ -1,0 +1,30 @@
+<div class="half" style="float:left;">
+	<%= picture_medium(@picture) %>
+	<div style="clear:both;"></div>
+	<span><%= @picture.views %> views updated <%= time_ago_in_words(@picture.updated_at) %> ago</span><br/>
+	<%= link_to 'Back to Album', album_path(@picture.album)%>
+</div>
+
+<div class="half" style="float: right;">
+	<h1 id="edit-header" class="top-rounded-corners">Tag Picture</h1>
+	<div id="edit-box" class="bottom-rounded-corners box">
+		<%= form_for(@picture) do |f| %>
+			<div><%= f.label :date %><%= f.date_select :date %></div>
+			<div><%= f.label :people %><%= f.text_field :people, :value => @picture.people_string %></div>
+			<div><%= f.label :tags %><%= f.text_field :tags, :value => @picture.tags_string %></div>
+			<div><%= f.label :notes %><%= f.text_area :notes %></div>
+		    <div><%= f.submit "Save" %></div>
+	  <% end %>
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	$('#edit-box').hide();
+	$('#edit-header').collapser({
+		'target': 'next',
+		'effect': 'slide',
+		'changeText': 0
+	});
+});
+</script>
+<div style="clear:both;"></div>

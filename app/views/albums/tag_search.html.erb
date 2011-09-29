@@ -1,0 +1,10 @@
+<h2>All Pictures Tagged With "<%= @tag %>"</h2>
+<%= link_to "Back to album", album_path(@album) %>
+<div style="clear:both;">&nbsp;</div>
+
+<% @pictures.each do |picture| %>
+	<%= picture_thumbnail(picture) %>
+<% end %>
+
+<div style="clear:both;">&nbsp;</div>
+<%= link_to "Back to album", album_path(@album) %>
