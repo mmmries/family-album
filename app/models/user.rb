@@ -5,4 +5,10 @@ class User
   devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable
   
   field :admin, type: Boolean
+  
+  has_and_belongs_to_many :albums
+  
+  def has_album?(a)
+    !albums.index(a).nil?
+  end
 end

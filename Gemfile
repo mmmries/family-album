@@ -11,6 +11,7 @@ gem 'haml'
 gem 'jquery-rails', '>= 1.0.12'
 
 gem 'devise', '>= 1.4.7'
+gem 'cancan', '>= 1.6.7'
 
 gem 'rmagick', '>= 2.13.1'
 
