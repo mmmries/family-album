@@ -1,0 +1,14 @@
+admin:
+  id: 1
+  email: admin@album.com
+  password: admin
+  
+user1:
+  id: 2
+  email: user1@album.com
+  password: user1
+  
+user2:
+  id: 3
+  email: user2@album.com
+  password: user2

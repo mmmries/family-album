@@ -15,6 +15,13 @@ gem 'cancan', '>= 1.6.7'
 
 gem 'rmagick', '>= 2.13.1'
 
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'mongiod-rspec'
+end
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
