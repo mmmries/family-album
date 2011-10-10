@@ -3,7 +3,7 @@ require File.expand_path('../boot', __FILE__)
 require "action_controller/railtie"
 require "action_mailer/railtie"
 require "active_resource/railtie"
-require "rails/test_unit/railtie"
+# require "rails/test_unit/railtie" ##we are using rspec instead
 # require "sprockets/railtie" # Uncomment this line for Rails 3.1+
 
 # If you have a Gemfile, require the gems listed there, including any gems
@@ -42,5 +42,11 @@ module FamilyAlbum
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    
+    ##ignore view/helper rspec generators
+    config.generators do |g|
+      g.view_specs false
+      g.helper_specs false
+    end
   end
 end

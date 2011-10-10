@@ -19,7 +19,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
-  gem 'mongiod-rspec'
+  gem 'mongoid-rspec'
 end
 
 # Bundle edge Rails instead:
